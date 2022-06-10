@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--bootstrap and font awesome--> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <head>
+<link rel="shortcut icon" type="image/jpg" href="https://i.imgur.com/CSmoAqP.jpeg"/>
+       
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+
+    <!--josefin sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<title>Discover | Volunteer Here</title>
+
+<style>
+/*nav bar*/
+.topnav {
+  background-color: white;
+  font-size: 22px;
+  color: black;
+position: absolute;
+width: 100%;
+
+}
+
+.topnav {
+  font-size: 22px;
+  color: white;
+}
+* {box-sizing: border-box; margin: 0; font-family: 'Josefin Sans', sans-serif;}
+body { overflow-x: hidden; margin: 0px; }
+
+/*header*/
+
+
+
+/*footer*/
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom:36px;
+}
+
+@media (max-width:767px) {
+  .footer-dark .item.text {
+    margin-bottom:0;
+  }
+}
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  .footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}
+
+/*filter*/
+.filterDiv {
+ float: middle;
+ 
+  text-align: center;
+ margin: 40px; 
+ 
+  display: none;
+ 
+   text-decoration: none;
+   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .filterDiv {
+        float: none;
+    }
+}
+
+.captions {
+padding-top: 230px;
+padding-left: 10px;
+padding-right: 10px;
+position: relative;
+bottom: 0px;
+
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+ 
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+
+  outline: none;
+  padding: 12px 16px;
+background-color: white;
+  cursor: pointer;
+  border-radius: 17%;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: white;
+  color: black;
+}
+
+/*dropdown*/
+/* Dropdown Button 
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 15px;
+  cursor: pointer;
+}*/
+
+/* Dropdown button on hover & focus 
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}*/
+
+/* The container <div> - needed to position the dropdown content 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}*/
+
+/* Dropdown Content (Hidden by Default) 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+
+  z-index: 1;
+}*/
+
+/* Links inside the dropdown 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}*/
+
+/* Change color of dropdown links on hover 
+.dropdown-content a:hover {background-color: #ddd}*/
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button)
+.show {display:block;}*/
+
+
+
+
+
+
+
+
+.my-nav {
+  list-style: none;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding: 0;
+}
+
+.my-nav > li {
+  display: block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+@media (min-width: 40em) {
+  .my-nav > li {
+    display: inline-block;
+  }
+}
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+.my-nav > li:before {
+  content: "\200B"; /* 1 */
+  position: absolute; /* 2 */
+}
+
+/**
+ * Style the clickable text
+ * Add your own styles to match other navigation items
+ */
+.dropdown > summary {
+  cursor: pointer;
+  font-size: 18px;
+  /* Customize from here down */
+  color:black;
+}
+
+/**
+ * Position the dropdown content
+ */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/**
+ * Style the dropdown list
+ */
+.dropdown > ul {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 0.25em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 19em;
+  position: absolute;
+  top: 1.5em;
+  z-index: 999;
+}
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+.dropdown > ul > li:before {
+  content: "\200B"; /* 1 */
+  position: absolute; /* 2 */
+}
+
+.header {
+background-size: cover;
+width: 100%;
+height: 240px;
+background-color: gainsboro;
+}
+
+
+
+
+
+div.gallery {
+  margin: 5px;
+  border: .5px solid #ccc;
+  float: left;
+
+  width: 400px;
+  
+}
+
+@media only screen and (max-width: 600px){
+    div.gallery { 
+      width: 250px;} 
+      
+      .center {margin-right: -10px; margin-left: -10px;}
+} 
+
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 10px;
+ 
+  text-align: center;
+}
+
+.center {
+  overflow: hidden;
+  display: block;
+  float: middle;
+  margin-right: 60px;
+  
+  margin-left: 60px;}
+
+
+
+
+
+</style>
+
+</head>
+
+
+
+
+<body>
+ <!--nav bar-->
+    
+
+ <div class="topnav" id="myTopnav">
+      
+    <div class="m-4">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:transparent; margin: -19px;">
+
+          <div class="container-fluid">
+           <a href="index.html"> <img src="https://fonts.gstatic.com/s/i/materialiconsround/volunteer_activism/v10/24px.svg" 
+
+
+            style="margin-right: 50px; height: 37px; width: 37px; margin-top: -12px;" alt="volunteer hand holding heart"></a>
+              
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" style=" color:white;" >
+                  <span class="navbar-toggler-icon" style=" color:white;" ></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <div class="navbar-nav" style="color: white;">
+                     <!-- <a href="index.html" class="nav-item nav-link active" style="color:black; margin-right: 50px;">Home</a>-->
+                       <a href="about.html" class="nav-item nav-link" style="color: black; margin-right: 50px;">About</a>
+                      <a href="retry.html" class="nav-item nav-link" style="color:black; margin-right: 50px;">Discover</a>
+                      <a href="suggest.html" class="nav-item nav-link" style="color:black; margin-right: 50px;">Suggest</a>
+                      <a href="contact.html" class="nav-item nav-link" style="color:black; margin-right: 50px;">Contact</a>
+                
+                  </div>
+                  <!--<div class="navbar-nav ms-auto">
+                      <a href="#" class="nav-item nav-link">Login</a>
+                  </div>-->
+              </div>
+          </div>
+      </nav>
+  </div>
+
+  </div>
+
+<br><br><br>
+<!--header-->
+<div class="header">
+<h3 style="font-size: 15px; padding-top: 60px; padding-left: 30px; font-weight:400px; ">DISCOVER</h3>
+<p style="font-size: 30px; font-weight: 400; line-height: 1.4; padding-left: 30px; padding-top: 10px;"> Explore the different volunteer opportunities
+we have available. </p>
+
+</div>
+<br><br><br><br>
+<!--main info-->
+
+<!--
+<div id="myBtnContainer" style="text-align:center;">
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Location</button>
+        <div id="myDropdown" class="dropdown-content">
+            <button class="btn active" onclick="filterSelection('all')"> All</button>
+            <br>
+  <button class="btn" onclick="filterSelection('danville')"> Danville</button>
+  <button class="btn" onclick="filterSelection('bloomsburg')"> Bloomsburg</button>
+  <button class="btn" onclick="filterSelection('lewisburg')"> Lewisburg</button>
+        </div>
+      
+</div>
+</div>
+
+        <div class="dropdown2" style="margin-left: 50px;">
+            <button onclick="myFunction()" class="dropbtn2">Age Range</button>
+            <div id="myDropdown" class="dropdown-content2">
+                <button class="btn active" onclick="filterSelection('all')"> All</button>
+                <br>
+      <button class="btn" onclick="filterSelection('teen')"> Teen</button>
+      <br>
+      <button class="btn" onclick="filterSelection('adult')"> Adult</button>
+      
+            </div>
+            </div>
+       
+            <div class="dropdown" style="margin-left: 50px;">
+                <button onclick="myFunction()" class="dropbtn">Type</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <button class="btn active" onclick="filterSelection('all')"> All</button>
+                    <br>
+          <button class="btn" onclick="filterSelection('caregiving')"> Caregiving</button>
+          <button class="btn" onclick="filterSelection('animal-care')"> Animal Care</button>
+          <button class="btn" onclick="filterSelection('community-service')"> Community Service</button>
+                </div>
+              </div>
+
+</div>-->
+
+<center>
+    <nav style="margin-bottom: 90px;">
+        <ul class="my-nav">
+          <li>
+            <details class="dropdown">
+              <summary>Location</summary>
+              <button class="btn active" onclick="filterSelection('all')"> All</button>
+              <br>
+    <button class="btn" onclick="filterSelection('danville')"> Danville</button>
+    <br>
+    <button class="btn" onclick="filterSelection('bloomsburg')"> Bloomsburg</button>
+    <br>
+    <button class="btn" onclick="filterSelection('lewisburg')"> Lewisburg</button>
+            </details>
+          </li>
+          <li>
+    
+            <details class="dropdown" style="margin-left: 50px;">
+              <summary>Age Limit</summary>
+              <button class="btn active" onclick="filterSelection('all')"> All</button>
+              
+    <br>
+    <button class="btn" onclick="filterSelection('adult')"> Adult</button>
+            </details>
+    
+            <details class="dropdown" style="margin-left: 50px;">
+                <summary>Type</summary>
+                <button class="btn active" onclick="filterSelection('all')"> All</button>
+                <br>
+      <button class="btn" onclick="filterSelection('caregiving')"> Caregiving</button>
+      <br>
+      <button class="btn" onclick="filterSelection('animal-care')"> Animal Care</button>
+      <br>
+      <button class="btn" onclick="filterSelection('community-service')"> Community Service</button>
+              </details>
+    
+          </li>
+        </ul>
+      </nav>
+    </center>
+      
+      
+      
+    
+    
+
+<div class="center">
+<div class="filterDiv gallery bloomsburg animal-care ">
+  <a href="cats.html">
+    <img src="https://i.imgur.com/RZkLwpZ.jpeg" class="bloomsburg animal-care " alt="cats in bloom front window" width="1200" height="800">
+  </a>
+  <div class="desc bloomsburg animal-care ">Cats in Bloom</div>
+</div>
+
+<div class="filterDiv gallery danville adult caregiving">
+  <a href="geisinger.html">
+    <img src="https://i.imgur.com/6ZZYsa9.jpeg" class="danville adult caregiving  " alt="geisinger main building" width="600" height="400">
+  </a>
+  <div class="desc danville adult caregiving ">Geisinger</div>
+</div>
+
+<div class="filterDiv gallery danville community-service">
+  <a href="foodbank.html">
+    <img src="https://i.imgur.com/iDFitSM.jpg" class="danville community-service " alt="volunteers gathering for foodbank" width="600" height="400">
+  </a>
+  <div class="desc danville community-service ">Danville Riverside Foodbank</div>
+</div>
+
+<div class="filterDiv gallery lewisburg community-service ">
+  <a href="garden.html">
+    <img src="https://i.imgur.com/8gYd7lf.jpeg" class="lewisburg community-service  " alt="lewisburg community garden sign" width="600" height="400">
+  </a>
+  <div class="desc lewisburg community-service ">Lewisburg Community Garden</div>
+</div>
+
+<div class="filterDiv gallery danville caregiving">
+  <a href="vintageknoll.html">
+    <img src="https://i.imgur.com/hYBbOAA.jpeg" class="danville caregiving " alt="vintage knolls mian building" width="600" height="400">
+  </a>
+  <div class="desc danville caregiving ">Vintage Knolls</div>
+</div>
+
+
+<div class=" filterDiv gallery danville community-service ">
+  <a href="goodsamaritan.html">
+    <img src="https://columbiamontourchamber.com/wp-content/uploads/Untitled-600-x-450-px-13-300x225.png" class=" gallery danville community-service " alt="danville good samaritan volunteers" width="600" height="400">
+  </a>
+  <div class="  desc danville community-service ">Good Samaritan Mission</div>
+</div>
+
+<div class="filterDiv gallery lewisburg animal-care ">
+  <a href="scratchingpost.html">
+    <img src="https://images.squarespace-cdn.com/content/v1/5dc8b6f9031296316666340c/1575409533382-6GO896GJ0WC0XK1LZB33/69875780_969655243375177_3093793835277352960_n.jpg" class="lewisburg animal-care " alt="the scratching post inside" width="1200" height="800">
+  </a>
+  <div class="desc lewisburg animal-care ">The Scratching Post</div>
+</div>
+
+<div class=" filterDiv gallery danville community-service ">
+  <a href="gatehouse.html">
+    <img src= "https://gatehousepa.org/assets/images/yard-event-3.jpg" class=" gallery danville community-service " alt="danville pspca sign" width="1200" height="800">
+  </a>
+  <div class="  desc danville community-service ">Gate House</div>
+</div>
+
+</div>
+
+  
+ 
+  
+    
+   
+   
+     <!-- <div class="filterDiv animals captions">Dog</div>
+      <div class="filterDiv fruits captions">Melon</div> -->
+      
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+     
+      
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown menu if the user clicks outside of it 
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    }
+    
+    //dropdown
+    
+    var nav = document.querySelector('.my-nav');
+    nav.addEventListener('toggle', function (event) {
+      
+      // Only run if the dropdown is open
+      if (!event.target.open) return;
+    
+      // Get all other open dropdowns and close them
+      var dropdowns = nav.querySelectorAll('.dropdown[open]');
+      Array.prototype.forEach.call(dropdowns, function (dropdown) {
+        if (dropdown === event.target) return;
+        dropdown.removeAttribute('open');
+      });
+    
+    }, true);
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    
+    
+
+    
+ 
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <div class="footer-dark" style="background-color: #588d64; color: white; margin-top: 100px;">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                  <div class="col item social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="mailto:volunteerherepa@gmail.com" target="_blank" ><i class="fa fa-envelope"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div> 
+
+
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                  
+                    <ul>
+                    <h3>Visit</h3>
+                        <li><a href="index.html">Home</a></li>
+                         <li><a href="about.html">About</a></li>
+                        <li><a href="retry.html">Discover</a></li>
+                        <li><a href="suggest.html">Suggest</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                       
+                              <li><a href="websiteaccess.html">Accessibility Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Volunteer Here</h3>
+                    <p>We are working toward a community connected. We share different local volunteer opportunities to encourage support and outreach.</p>
+                </div>
+          
+        </div>
+    </footer>
+</div>
+
+</body>
+
+
+
+
+
+
+</html>
